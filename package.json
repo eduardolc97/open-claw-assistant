@@ -1,0 +1,28 @@
+{
+  "name": "open-claw-assistant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardolc97/open-claw-assistant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardolc97/open-claw-assistant/issues"
+  },
+  "homepage": "https://github.com/eduardolc97/open-claw-assistant#readme",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "prisma": "^7.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
+  }
+}
