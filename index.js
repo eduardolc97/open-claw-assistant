@@ -13,7 +13,7 @@ const adapter = new PrismaPg({
 
 export const prisma = new PrismaClient({ adapter });
 
-const createUser = async (id, name, email) => {
+const createUser = async ({ id, name, email }) => {
   return prisma.user.create({
     data: {
       id, name, email
@@ -29,6 +29,11 @@ const getUsers = async () => {
 app.get('/users', async (req, res) => {
   console.log(JSON.stringify(await getUsers()));
   res.send(JSON.stringify(await getUsers()));
+})
+
+app.post('/users', async (req, res) => {
+  const createdUser = createUser({id: '3', name: 'Kaique', email: 'kaique_cerato@hotmail.com'});
+  res.send('Success!');
 })
 
 app.listen(port, () => {
