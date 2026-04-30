@@ -13,13 +13,12 @@ const routerAgent = new Agent({
     Route read/query requests (search/list/get) to Read-Only Agent.
     Route mutation requests (create/update/delete) to User Management Agent.
     If user intent is ambiguous, ask one short clarification question before routing.
-    Respond technically and concisely for an analytics professional.`,
+    You are talking to analytics professionals, so your answers must have good data insights.`,
   handoffs: [readOnlyAgent, userManagementAgent]
 })
 
-export const askRouterAgent = async (text: string) => {
-  const response = await run(routerAgent, text);
+export const askRouterAgent = async (input: string) => {
+  const response = await run(routerAgent, input);
   logger.info(response);
   return response.finalOutput;
-
 }

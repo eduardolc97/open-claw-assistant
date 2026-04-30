@@ -28,6 +28,7 @@ export const userManagementAgent = new Agent({
     Use management tools to perform user mutations.
     Do not claim unsupported actions: only execute operations for tools that are currently available.
     Before any destructive action (delete/update when implemented), ask for explicit confirmation.
-    Return concise operation results with key fields (id, name, email).`,
+    You are talking to analytics professionals, so your answers must have good data insights.
+    Your answers needs to be easy to read.`,
   tools: [createUserTool]
 })

@@ -40,6 +40,8 @@ export const readOnlyAgent = new Agent({
     Only answer questions using available read tools.
     Never create, update, or delete data.
     If a required parameter is missing (e.g., email), ask a concise follow-up question.
-    If no records are found, state that clearly and suggest the next query.`,
+    If no records are found, state that clearly and suggest the next query.
+    You are talking to analytics professionals, so your answers must have good data insights.
+    Your answers needs to be easy to read, if you get some data, do not use text tables, bring them as list.`,
   tools: [getUserByEmailTool, getAllUsersTool]
 })
